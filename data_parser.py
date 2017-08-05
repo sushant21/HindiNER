@@ -23,14 +23,23 @@ def load(fileName):
     with open(fileName,'r') as file:
         x=file.read()
         x=x.splitlines()
-        for line in x:
+        for i in range(0,len(x),2):
+            line=x[i]
+            label_line=x[i+1]
+            label_dict={}
+            labels=label_line.split(',')
+            for label in labels:
+                pos=label.find(':')
+                label_dict[label[pos+1:]]=label[:label.find(':')]
             line_list=[]
             line=line.translate(None, string.punctuation)
             words=x.split(' ')
             for word in words:
                 cat=category(word)
-                
-                line_list.append([word,cat,label])
+                if word in label_dict:
+                    line_list.append([word,cat,label_dict[word]])
+                else:
+                    line_list.append([word,cat,0])
             list.append(line_list)
     return line_list
 
