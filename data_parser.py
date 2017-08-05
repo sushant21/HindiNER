@@ -10,7 +10,7 @@ def load(fileName):
     #the entity of the word. For current training datasets, these are-
     #(Date-Date, Num-Number of tickets, Dest-Destination, Src-Source Location)
     #category is obtained from features.category() function
-    list=[]
+    listt=[]
     
     ##### change this code so that pickle file is loaded minimum number of times
     pickle_file = 'list_of_words.pickle'
@@ -34,13 +34,13 @@ def load(fileName):
                 label_dict[label[pos+1:]]=label[:label.find(':')]
             line_list=[]
             line=line.translate(None, string.punctuation)
-            words=x.split(' ')
+            words=line.split(' ')
             for word in words:
-                cat=category(word)
+                cat=features.category(word)
                 if word in label_dict:
                     line_list.append([word,cat,label_dict[word]])
                 else:
-                    line_list.append([word,cat,0])
-            list.append(line_list)
-    return line_list
+                    line_list.append([word,cat,'0'])
+            listt.append(line_list)
+    return listt
 

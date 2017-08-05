@@ -1,13 +1,17 @@
 import os
 import string
+noun_list=[]
+verb_list=[]
+adverb_list=[]
+adjective_list=[]
 
-#def isdigit(word):
- #   pass
+def isdigit(word):
+    return word.isdigit()
 
 def frequencies(fileName):
     #return a dictionary of word frequencies in the file
     dict={}
-    with open(filename,'r') as file:
+    with open(fileName,'r') as file:
     #     while True:
         y=file.read()
         y=y.splitlines()
