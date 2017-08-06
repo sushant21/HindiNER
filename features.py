@@ -9,21 +9,11 @@ def frequencies(fileName):
     #return a dictionary of word frequencies in the file
     dict={}
     with open(fileName,'r') as file:
-    #     while True:
         y=file.read()
         y=y.splitlines()
-    #         x.rstrip()
         for x in y:
             x=x.translate(None, string.punctuation)
-    #         x=x.split(' ')
-    #         if x=='':
-    #             break
             x=x.split(' ')
-    #         print x
-    #         y=[]
-    #         for i in x:
-    #           y.append(i.encode('utf-8'))
-    #         print x[0]
             for i in x:
                 if i in dict:
                     dict[i]+=1
