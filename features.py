@@ -1,9 +1,6 @@
 import os
 import string
-noun_list=[]
-verb_list=[]
-adverb_list=[]
-adjective_list=[]
+import word_lists as wl
 
 def isdigit(word):
     return word.isdigit()
@@ -35,13 +32,13 @@ def frequencies(fileName):
     return dict
 
 def category(word):
-    if word in noun_list:
+    if word in wl.noun_list:
         return 'N'
-    if word in verb_list:
+    if word in wl.verb_list:
         return 'V'
-    if word in adverb_list:
+    if word in wl.adverb_list:
         return 'AV'
-    if word in adjective_list:
+    if word in wl.adjective_list:
         return 'AJ'
     return 'X'
     #category is retreived from the Hindi WordNet database (text file),return N for noun,
