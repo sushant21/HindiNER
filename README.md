@@ -7,7 +7,7 @@ Instructions on how to use this module-
 1. Clone the repo.
 2. Install dependencies in requirements.txt ('pip install requirements.txt')
 3. In your python app, import crf_NER
-4. The syntax for training on your dataset is- train(file location of train.txt,file location of test.txt,verbose=True)
+4. The syntax for training on your dataset is- train( file location of train.txt , file location of test.txt ,verbose=True)
 (test.txt and verbose arguments are optional)
   Example- trained_model=train('train.txt','test.txt',verbose=True)
 5. The returned object can be used to make predictions on new sentences using object.predict_sent method.
