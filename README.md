@@ -17,4 +17,7 @@ Instructions on how to use this module-
 The format of 'train.txt' and 'test.txt' must be sentence followed by (in the next line) entity labelings.
 For example, in the training data provided with this repo ('train.txt'), we have classified sentence words into entities source ('S'), destination ('D'), time ('T'), number of bookings ('N'). Hence the entities are specified as- D:word,N:word,T:word
 
+
+Go to this link to watch a live demo :- https://youtu.be/CqZFeb_YhoI
+
 Thanks to CFILT, IIT Bombay for the Hindi Wordnet database.
